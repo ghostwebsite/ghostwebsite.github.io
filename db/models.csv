@@ -1,0 +1,7 @@
+Model,Score
+K-Nearest Neighbor,0.893
+Support Vector Machine,0.895
+Random Trees,0.908
+Logistic Regression,0.915
+Multiple Linear Regression,0.172
+Grid Search Best Score,0.909

@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!--OG MARK-UP -->
+<meta prefix="og: http://ogp.me/ns#" property="og:type" content="website" />
+<meta prefix="og: http://ogp.me/ns#" property="og:title" content="Learning Machine Learning" />
+<meta prefix="og: http://ogp.me/ns#" property="og:description" content="An Interactive Illumination on Machine Learning for Business Applications." />
+<meta prefix="og: http://ogp.me/ns#" property="og:image" content="static/assets/background_placeholder.jpg" />
+<meta prefix="og: http://ogp.me/ns#" property="og:url" content="https://retrofacd.github.io/index.html" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<!--TO CUSTOMIZE THIS TEMPLATE, YOU CAN SELECT OTHER FONTS ON GOOGLE'S FREE FONT API  -->
+    <link href="https://fonts.googleapis.com/css?family=Slabo+27px|Patua+One|Archivo+Narrow" rel="stylesheet">
+<!-- FOR SOCIAL MEDIA BUTTONS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Learning Machine Learning</title>
+</head>
+
+<style>
+/* IMPORTANT, KEEP HEIGHT PERCENTAGE (100%) FOR PARRALEX EFFECT TO WORK  */
+body, html {
+  height: 100%;
+  margin: 0;
+  padding:0;
+  font: 400 16px/1.8 "Slabo 27px", sans-serif;
+  color: #777;
+}
+/* THESE ARE YOUR BACKGROUND IMAGES SETTINGS, IF YOU WANT TO CUSTOMIZE THIS TEMPLATE, ONLY CHANGE YOUR IMAGE URLS */
+.bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4 {
+  position: relative;
+  opacity: 0.65;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.bgimg-1 {
+  background-image: url("assets/back_1.png");
+  min-height: 100%;
+
+}
+.bgimg-2 {
+  background-image: url("assets/back_2.png");
+  min-height: 100%;
+
+}
+.bgimg-3 {
+  background-image: url("assets/back_3.png");
+  min-height: 100%;
+}
+
+.bgimg-4 {
+  background-image: url("assets/back_4.png");
+  min-height: 100%;
+}
+/* THESE ARE YOUR SETTINGS FOR MOBILE DEVICES/SMALLER SCREEN SIZES */
+@media screen and (max-device-width: 500px){
+  .bgimg-1 {
+    background-image: url("assets/background_placeholder.jpg");
+    min-height: 600px;
+  }
+  .bgimg-2 {
+    background-image: url("assets/background_placeholder.jpg");
+    min-height: 100%;
+  }
+  .bgimg-3 {
+    background-image: url("assets/background_placeholder.jpg");
+    min-height: 100%;
+  }
+  .bgimg-4 {
+    background-image: url("assets/background_placeholder.jpg");
+    min-height: 100%;
+  }
+}
+/* THESE ARE YOUR STYLE SETTINGS FOR CAPTIONS  */
+.caption {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #f6e0b5;
+  opacity: .7;
+}
+.caption span.border {
+    background-color: #0095b6;
+    color: #fff;
+    padding: 25px;
+    font-size: 25px;
+    letter-spacing: 1px;
+    opacity: .75;
+    font-family:'Patua One';
+}
+/* THESE ARE YOUR MAIN FONT SETTINGS  */
+h1 {
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  font: 26px "Oswald", sans-serif;
+  color: #111;
+}
+h2 {
+  letter-spacing: .5px;
+  text-transform: uppercase;
+  font: 20px "Patua One", serif;
+  color: #ecebe8;
+}
+h3 {
+  letter-spacing: 3px;
+  font-weight: bolder;
+  text-transform: uppercase;
+  font: 26px "Archivo Narrow", sans-serif;
+  color: #111;
+}
+h4 {
+  letter-spacing: 0.8px;
+  /* text-transform: uppercase; */
+  font: 26px "Archivo Narrow", sans-serif;
+  color: #272727;
+}
+/* THIS IS YOUR COLOR SETTING FOR ANYTHING THAT HAS A LINK TAG  */
+a {
+  color:#249cbf;
+}
+
+/*THIS IS HERE TO DISABLE THE PARRALEX SCROLLING EFFECT ON MOBILE DEVICE */
+@media only screen and (max-device-width: 550px) {
+    .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4 {
+        background-attachment: scroll;
+    }
+}
+/* THIS IS YOUR NAVBAR STYLE SETTINGS  */
+.navbar{
+         padding-left: 0px;
+         font-family: "Patua One";
+         font-size: 14PX;
+         text-align: left;
+         color: #595050;
+}
+/* THIS IS YOUR NAVBAR BACKGROUND/ACCENT COLOR WHEN CLICKED */
+.navbar-default .navbar-brand {
+    color: #272727;
+    background-color:#efefef;
+    opacity:.7;
+    font-weight: bold;
+    text-align: left;
+    font-family: "Patua One";
+    font-size: 17PX;
+}
+/* THIS IS YOUR MAIN COLOR ACROSS THE NAVBAR */
+.navbar {
+    background-color: white;
+  }
+/* HERE FOR TEXT ALIGN, OPACITY, PADDING  */
+.vision {
+  text-align: left;
+  opacity:.6;
+  padding:20px;
+}
+
+.bar {
+  fill: grey;
+}
+
+.bar:hover {
+  fill: white;
+}
+
+.tooltip {
+  position: absolute;
+  text-align: center;
+  width: 90px;
+  height: 80px;
+  padding: 2px;
+  font: 12px "Archivo Narrow";
+  background: black;
+  border: 2px;
+  border-radius: 8px;
+  pointer-events: none;
+}
+
+/* * {
+  font-family: "Archivo Narrow";
+} */
+svg {
+  background: #f1f1f1;
+}
+.right {
+  position : absolute;
+  top:0;
+  right:0;
+  background: black;
+  width: 650px;
+  height: 650px;
+}
+
+</style>
+
+<body>
+<!-- FIXED NAVBAR -->
+  <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid">
+          <div class="navbar-header">
+             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+             aria-expanded="false">
+                 <span class="sr-only">Toggle navigation</span>
+                 <span class="icon-bar"></span>
+                 <span class="icon-bar"></span>
+                 <span class="icon-bar"></span>
+             </button>
+             <a class="navbar-brand" href="#home">LEARNING MACHINE LEARNING</a>
+           </div>
+              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">CURIOUS?<span class="caret"></span></a>
+                     <ul class="dropdown-menu">
+                       <li><a href="#readme">READ ME</a></li>
+                        <li><a href="#data_process">DATA PROCESS</a></li>
+                        <li><a href="#context">CONTEXT</a></li>
+                        <li><a href="#machine_logic">LOGIC</a></li>
+                       <li><a href="#dataviz">DATA VISUALIZATIONS</a></li>
+                       <li><a href="#machine_learning">MACHINE LEARNING</a></li>
+                     </ul>
+                  </li>
+                    <li><a href="#findings">FINDINGS</a></li>
+               </ul>
+             </div>
+           </div>
+         </nav>
+
+<!-- BACKGROUND IMAGE-->
+<div class="bgimg-1">
+  <!-- <div class="caption">
+    <span class="border">⇩ START EXPLORING ⇩</span>
+  </div> -->
+</div>
+<!-- READ ME -->
+    <div style="color: #777;background-color:white;padding:20px;">
+      <div class="container-fluid" id="readme">
+        <div class="row">
+          <div class="col-md-12">
+            <h3 style="text-align:center;padding:20px">Read Me</h3>
+            <h2 style="color:#272727;font-size:16px;text-align:left;padding-left:14px;">Values and Intent</h2>
+          <div class="col-md-6">
+              <p style="font-weight:bolder; opacity:1;color:#272727";>You must be here to learn about machine learning, since you are on our site. Unless, that is, you are already a machine and you stumbled upon our site in search of imitation. In either scenario, it is our intention to illuminate the costs & benefits of algortihm-based thinking.</p>
+              <p>A study of 46 countries and 800 occupations by the McKinsey Global Institute found "up to 800 million global workers will lose their jobs by 2030 and be replaced by robotic automation".  With this in consideration, how can we help prepare others for the future? After all, human beings are unique in that we derive our accomplishments from those who provided us with knowledge & skills (Laland, 34). Evolutionary biologist, Kevin Laland further expresses the value of culture in our survival:</p><p> “This communal store of experience enables creation of ever more efficient and diverse solutions to life’s challenges. It was not our large brains, intelligence or language that gave us culture but rather our culture that gave us large brains, intelligence and language…the term ‘culture’ implies fashion or haute cuisine, but boiled down to its scientific essence, culture comprises behavior patterns shared by members of a community that rely on socially transmitted information” (34).
+              </p>
+              <p style="font-weight:bolder; opacity:1;color:#272727";>We live in a time where communication is faster and more populated than ever before thanks to social platforms and the commercialization of the internet. Therefore, it is our responsibility to share our knowledge with others as means for future sustainability. Executive Chairman & Co-Founder of Alibaba, Jack Ma, shares this notion  at the World Economic Forum in Davos, Switzerland: "We cannot teach our kids to compete with machines.  Teachers must stop teaching knowledge. We have to teach something unique, so a machine can never catch up with us."
+              </p>
+            </div>
+        <div class="col-md-6">
+            <p style="font-weight:bolder; opacity:1;color:#272727;";>In terms of problem-solving, Ma adds:</p>
+               <p>"Education is a big challenge now.  If we don’t change the way we teach, we will be in big trouble in 30 years from now… the way we teach, the things we teach our kids, are the things from the past 200 years – its knowledge based. We need to be teaching our children values, believing, independent thinking, teamwork, care for others...these are the soft parts. The knowledge will not teach you that... we should teach our kids sports, music, painting, art. Everything we teach should be different from machines".</p>
+              <p style="font-weight:bolder; opacity:1;color:#272727;">With this in mind, let us walk you through:
+            <ul><li> the selection of our database, </li>
+              <li> patterns that were illuminated through data analysis, </li>
+              <li> significant variables in our data, </li>
+              <li> the challenges we faced,</li>
+              <li> the knowledge gained from learning. </li>
+            </ul><p style="font-weight:bolder; opacity:1;color:#272727";>We understand there are complexities & intricacies weaved within machine learning algorithms that can blur the overall message. Rather than disect every mathematical principle in an alorgithm's structure, we will visualize them in meaningful ways so that you will have gained a new perspective. Insight that can be shared with others and that can inspire societal progress and business growth.</p>
+          </div>
+<!--INTRODUCTION IMAGE -->
+          <img src="assets/process.png" alt="Read Me" style="width:100%">
+        </div>
+      </div>
+      </div>
+    </div>
+
+<!-- BACKGROUND IMAGE-->
+<div class="bgimg-2">
+  <!-- <div class="caption">
+    <span class="border" style="background-color:#f5e6bb;font-size:25px;color: #272727;">LEARN ABOUT MACHINE LEARNING</span>
+  </div> -->
+</div
+<!-- CONTAINER WITH THESIS TEXT -->
+  <div class="container-fluid" id="home">
+    <div style="color: #777;background-color:white;text-align:center;padding:50px 100px;text-align: justify;">
+      <h3 style="text-align:center;font-size:18px;">The past, like the future, is indefinite and exists only as a spectrum of possibilities.</h3>
+    </div>
+  </div>
+<!-- BACKGROUND IMAGE -->
+<div class="bgimg-3">
+  <!-- <div class="caption">
+    <span class="border" style="background-color:#f8cc07;font-size:25px;color: #272727;">⇩PLACEHOLDER"⇩</span>
+  </div> -->
+</div>
+<!-- DATA ANALYSIS/VISUALIZATION -->
+    <div style="color: #777;background-color:white;text-align:center;padding-top:90px;text-align: justify;">
+      <div class="container-fluid" id="data_process">
+      <h3 style="text-align:center;">Data Analysis | Data Visualization | Process</h3>
+      <h2 style="color:#272727;font-size:20px;text-align:center;padding:20px;">Data Source: <a href="https://www.kaggle.com/rush4ratio/video-game-sales-with-ratings">Video Game Sales with Ratings.</a></h2>
+      <div class="row">
+          <div class="col-md-12">
+            <!-- <div class="vision"><h4>Selecting a Database</h4><p>Why did we choose this database?</p> -->
+            </div>
+            <img src="assets/data_process.png" alt="Linear Regression" style="width:100%">
+          </div>
+      </div>
+    </div>
+  </div>
+
+<!-- BACKGROUND IMAGE-->
+<div class="bgimg-2">
+  <!-- <div class="caption">
+    <span class="border" style="background-color:#f5e6bb;font-size:25px;color: #272727;">✇ COMPUTER SCREEN DREAMS ✇</span>
+  </div> -->
+</div>
+<!--D3 VISUALIZATIONS-->
+<div style="position:relative;">
+  <div class="container-fluid" id="dataviz">
+      <h3 style="text-align:center;padding:20px">Data Visualization | Dynamic | Results</h3>
+      <h2 style="color:#272727;font-size:20px;text-align:center;padding:20px;">Data Source: <a href="https://www.kaggle.com/rush4ratio/video-game-sales-with-ratings">Video Game Sales with Ratings.</a></h2>
+        <div class="row">
+          <div class="col-md-12"style="text-align:center;">
+            <div id="chart"></div>
+            <h4>Genre Count Visualization</h4><p>Count of Games per Genre.</p>
+              <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.2.2/d3.min.js"></script>
+              <script src= "js/bubbles.js"></script>
+              </div>
+            <div class="col-md-12"style="text-align:center;">
+                <div id="chart2"></div>
+                <h4>Rating Visualization</h4><p>NA Sales vs. Rating.</p>
+                  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.2.2/d3.min.js"></script>
+                  <script src="js/bar1.js"></script>
+              </div>
+            <div class="col-md-12"style="text-align:center;">
+                <div id="chart3"></div>
+                <h4>Critic Score Visualization</h4><p>NA Sales vs. Critic Score.</p>
+                  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.2.2/d3.min.js"></script>
+                  <script src= "js/bar2.js"></script>
+              </div>
+              <div class="col-md-12"style="text-align:center;">
+                  <div id="chart4"></div>
+                  <h4>Machine Learning Algorithms Visualization</h4><p>K-Nearest-Neighbor, Support Vector Machine, Random Trees, Logisitic Regression, Multiple Linear Regression, Grid Search Best Score.</p>
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.2.2/d3.min.js"></script>
+                    <script src= "js/bar3.js"></script>
+                </div>
+        </div>
+      </div>
+    </div>
+<!-- BACKGROUND IMAGE-->
+  <div class="bgimg-3"></div>
+
+<!-- SUMMARY MACHINE LEARNING  -->
+    <div style="color: #777;background-color:white;text-align:center;padding-top:90px;text-align: justify;">
+      <div class="container-fluid" id="machine_learning">
+        <h3 style="text-align:center;">machine learning | learning | spectrum</h3>
+        <br></br>
+          <div class="row">
+              <div class="col-md-12">
+                <img src="assets/ml_overview.png" alt="Installation" style="width:100%">
+                <!-- <div class="vision"><h4>THIS IS A VISUAL OF AN OVERVIEW</h4></div> -->
+              </div>
+            </div>
+          </div>
+<!--EXTRA ADD-ON CONTAINER -->
+    <div style="position:relative;">
+      <div class="container-fluid">
+        <div style="background-color:#272727;text-align:left;padding:30px;text-align: left;">
+          <h2>BLAST FROM THE PAST:</h2>
+              <h2><a href="https://www.jstor.org/stable/e24980490">Machines That Learn from Hints, 1995.</a></h2>
+              <h2><a href="https://eric.ed.gov/?id=EJ458272">How Neural Networks Learn from Experience, 1992.</a></h2>
+              <h2><a href="https://www.jstor.org/stable/24939222">The Problem of Consciousness, 1992.</a></h2>
+              <h2><a href="https://www.jstor.org/stable/i20715540">The Role of Technology and the Arts in the Invention of Mind, 1983.</a></h2>
+            </div>
+          </div>
+        </div>
+      </div>
+
+<div class="bgimg-2"></div>
+
+<!-- LEARNING ABOUT OUR ALGORITHMS -->
+  <div style="color: #777;background-color:white;text-align:center;padding-top:90px;text-align: justify;">
+        <div class="container-fluid" id="context">
+          <div class="row">
+              <h3 style="text-align:center;">MACHINE LEARNING | ALGORITHMS | CONTEXT</h3>
+              <h2 style="color:#272727;font-size:20px;text-align:center;padding:20px;">ALGORITHMS: <a href="https://medium.com/simple-ai/linear-regression-intro-to-machine-learning-6-6e320dbdaf06">Linear Regression</a>,<a href="https://towardsdatascience.com/super-simple-machine-learning-by-me-multiple-linear-regression-part-1-447800e8b624"> Multiple Linear Regression</a>,<a href="https://medium.com/simple-ai/logistic-regression-intro-to-machine-learning-7-ba18ab305b24"> Logistic Regression</a>,<a href="https://towardsdatascience.com/enchanted-random-forest-b08d418cb411"> Random Trees</a>,<a href="https://towardsdatascience.com/introduction-to-k-nearest-neighbors-3b534bb11d26"> K-Nearest-Neighbors</a>, and <a href="https://medium.com/machine-learning-101/chapter-2-svm-support-vector-machine-theory-f0812effc72">
+                 Support Vector Machine </a>.</h2>
+          <div class="col-md-12">
+            <div class="container-fluid">
+              <img src="assets/algorithm_map.png" alt="Linear Regression Overview" style="width:100%;padding:8px;">
+            </div>
+            </div>
+          <div class="col-md-12">
+            <div class="container-fluid">
+              <div class="vision" style="text-align:left;"><h4>Single Linear Regression | Regression | Supervised Learning</h4></div>
+                <img src="assets/single_regression.png" alt="Linear Regression Overview" style="width:100%;padding:8px;">
+              </div>
+            </div>
+          <div class="col-md-12">
+              <div class="container-fluid">
+                <div class="vision"style="text-align:left;"><h4>Multiple Linear Regression | Regression | Supervised Learning</h4></div>
+                  <img src="assets/mult_line.png" alt="Multiple Linear Regression Overview" style="width:100%;padding:8px;">
+                </div>
+              </div>
+            <div class="col-md-12">
+              <div class="container-fluid">
+                <div class="vision"style="text-align:left;"><h4>Logistic Regression | Classification | Supervised Learning</h4></div>
+              <img src="assets/logistic.png" alt="Logistic Regression Overview" style="width:100%;padding:8px;">
+            </div>
+          </div>
+            <div class="col-md-12">
+              <div class="container-fluid">
+                <div class="vision"style="text-align:left;"><h4>Random Trees | Classification | Supervised Learning</h4></div>
+                <img src="assets/random_trees.png" alt="Random Trees Overview" style="width:100%;padding:8px;">
+            </div>
+          </div>
+            <div class="col-md-12">
+              <div class="container-fluid">
+                <div class="vision"style="text-align:left;"><h4>K-Nearest-Neighbors | Clustering | Unsupervised Learning</h4></div>
+                <img src="assets/knn.png" alt="K-Nearest Neighbors Overview" style="width:100%;padding:8px;">
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div class="container-fluid">
+                <div class="vision"style="text-align:left;"><h4>Support Vector Machine | Clustering | Unsupervised Learning</h4></div>
+                <img src="assets/svm.png" alt="Support Vector Machine Overview" style="width:100%;padding:8px;">
+                <br></br>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+<!--BACKGROUND IMAGE-->
+<div class="bgimg-1">
+  <!-- <div class="caption">
+    <span class="border" style="background-color:#f8cc07;font-size:25px;color: #272727;">⇨ LOGIC IS AMAZING ⇦</span>
+  </div> -->
+</div>
+<div class="bgimg-3">
+  <!-- <div class="caption">
+    <span class="border" style="background-color:#f8cc07;font-size:25px;color: #272727;">⇨ LOGIC IS AMAZING ⇦</span>
+  </div> -->
+</div>
+<!-- MACHINE LEARNING -->
+<div style="color: #777;background-color:white;text-align:center;padding-top:90px;text-align: justify;">
+  <div class="container-fluid" id="machine_logic">
+      <h3 style="text-align:center;">Machine Learning Analysis | Visualization | Logic</h3>
+      <h2 style="color:#272727;font-size:20px;text-align:center;">Findings and Process.</h2>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="container-fluid">
+            <div class="vision"style="opacity:7.9;"><img src="assets/logic.png" alt="SVM Visual" style="width:100%;">
+            </div>
+          </div>
+        </div>
+          <div class="col-md-12">
+            <div class="container-fluid">
+              <div class="vision"style="opacity:7.9;"><img src="assets/linear_regression_sales.png" alt="SVM Visual" style="width:100%;padding:8px;">
+                <div class="container-fluid">
+                  <!-- <h4 style="font-size:16px;">NA Sales vs. Critic Score | Single Linear Regression</h4> -->
+                  <!-- <p style="font-weight:bolder; opacity:1;color:#272727";>The single linear regression compared Critic Scores against North American Sales. The relationship was ~.10, indicated there was very little relationship between the variable.</p> -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="container-fluid">
+              <div class="vision"style="opacity:7.9;">
+                <img src="assets/random_trees_sales.png" alt="SVM Visual" style="width:100%;padding:8px;">
+                  <!-- <h4 style="font-size:16px;">NA Sales vs. User Count, Critic Count, Critic Score, User Score, Genre and Rating | Random Trees</h4> -->
+                    <!-- <p>The random trees comparison revealed the variables that impacted North American sales, in declining order, were:</p> <ul>
+                  <li>Number of User Reviews</li>
+                  <li> Number of Critic Review</li>
+                  <li>Critic Scores</li>
+                  <li>User Scores</li>
+                  <li>Genre</li>
+                  <li>Rating</li>
+                </ul><p style="font-weight:bolder; opacity:1;color:#272727";>We used greater than one million is sales as a the true-false condition for our tests, the Random Trees score revealed a ~.91 predictive ability.</p> -->
+              </div>
+            </div>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <div class="container-fluid">
+          <div class="vision"style="opacity:7.9;"><img src="assets/machine_logic_2.png" alt="SVM Visual" style="width:100%;">
+          </div>
+        </div>
+      </div>
+          <div class="col-md-12">
+            <div class="container-fluid">
+              <div class="vision"style="opacity:7.9;">
+                <img src="assets/knn_sales.png" alt="SVM Visual" style="width:100%;padding:8px;">
+                <!-- <h4 style="font-size:16px;">NA Sales vs. Critic Score, Critic Count, User Score, User Count, Genre and Rating | K-Nearest-Neighbors</h4> -->
+                <!-- <p style="font-weight:bolder; opacity:1;color:#272727";>The single linear regression compared Critic Scores against North American Sales. The relationship was ~.10, indicated there was very little relationship between the variable.</p> -->
+              </div>
+            </div>
+          </div>
+  </div>
+</div>
+</div>
+<!--BACKGROUND IMAGE-->
+<div class="bgimg-1">
+  <!-- <div class="caption">
+    <span class="border" style="background-color:#f8cc07;font-size:25px;color: #272727;">⇩PLACEHOLDER⇩</span>
+  </div> -->
+</div>
+<!--FINDINGS + APPLICATIONS -->
+<div style="color: #777;background-color:white;text-align:center;padding-top:90px;text-align: justify;">
+  <div class="container-fluid" id="findings">
+  <h3 style="text-align:center;">FINDINGS FOR THE FUTURE</h3>
+  <h2 style="color:#272727;font-size:20px;text-align:center;">Applications for Use in Business.</h2><br></br>
+  <div class="row">
+    <div class="col-md-12">
+      <img src="assets/ml_business.png" alt="Installation" style="width:100%">
+      <div class="vision"></div>
+    </div>
+        </div>
+      </div>
+      </div>
+  <!--EXTRA ADD-ON CONTAINER -->
+  <div style="position:relative;">
+    <div class="container-fluid">
+    <div style="background-color:#272727;text-align:left;padding:30px;text-align: left;">
+      <h2>LEARNING FOR THE FUTURE:</h2>
+      <h2><a href="https://www.nature.com/scientificamerican/journal/v319/n3/full/scientificamerican0918-40.html">Techno Sapiens, 2018.</a></h2>
+      <h2><a href="https://www.technologyreview.com/s/612261/neural-networks-dont-understand-what-optical-illusions-are/">Neural Networks Don't Understand What Optical Illusions Are, 2018.</a></h2>
+      <h2><a href="https://blog.learnfasthq.com/jack-ma-teach-soft-skills-not-knowledge-to-compete-with-machines">Jack Ma: Teach Soft Skills, Not Knowledge, to Compete with Machines, 2018.</a></h2>
+      <h2><a href="https://www.linkedin.com/feed/update/urn:li:ugcPost:6460885872706416640">Overview of AI and the Future in Businesses, 2018.</a></h2>
+      <h2><a href="https://www.bbc.com/news/world-us-canada-42170100">Robot Automation Will Take 800 Million Jobs by 2030, 2017.</a></h2>
+    </div>
+    </div>
+  </div>
+</div>
+
+<!--BACKGROUND IMAGE 4 WITH MOVING MESSAGE -->
+<div class="bgimg-4">
+  <!-- <div class="caption">
+    <span class="border"style=>⇩PLACEHOLDER⇧</span>
+  </div> -->
+</div>
+<!-- <script src="https://cdn.plot.ly/plotly-1.31.2.min.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<!-- <script src="{{ url_for('static', filename='static/js/bonus.js') }}"></script>
+<script src="{{ url_for('static', filename='static/js/app.js') }}"></script>
+<script src="{{ url_for('assets', filename='assets/placeholder.png') }}"></script> -->
+
+
+<script
+src="https://code.jquery.com/jquery-3.2.1.js"
+integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.2.2/d3.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
+</script>
+<!-- <footer class="footer" style="text-align:center;padding:20px";>
+  <h2 style="color:#675f5d;font-size:16px;">Template Design + Build :  Caroline L. Teti ©️ 2018.</h2></footer> -->
+</body>
+
+<!--BUILT + CRAFTED BY CAROLINE L. TETI, OCTOBER 2018. WITH LOVE FROM BOOTSTRAP + W3 SCHOOLS + PARRALEX EFFECT <3 -->
+
+</html>

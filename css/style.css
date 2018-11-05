@@ -1,0 +1,176 @@
+
+/* IMPORTANT, KEEP HEIGHT PERCENTAGE (100%) FOR PARRALEX EFFECT TO WORK  */
+body, html {
+  height: 100%;
+  margin: 0;
+  padding:0;
+  font: 400 16px/1.8 "Slabo 27px", sans-serif;
+  color: #777;
+}
+/* THESE ARE YOUR BACKGROUND IMAGES SETTINGS, IF YOU WANT TO CUSTOMIZE THIS TEMPLATE, ONLY CHANGE YOUR IMAGE URLS */
+.bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4 {
+  position: relative;
+  opacity: 0.65;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.bgimg-1 {
+  background-image: url("assets/back_1.png");
+  min-height: 100%;
+
+}
+.bgimg-2 {
+  background-image: url("assets/back_2.png");
+  min-height: 100%;
+
+}
+.bgimg-3 {
+  background-image: url("assets/back_3.png");
+  min-height: 100%;
+}
+
+.bgimg-4 {
+  background-image: url("assets/back_4.png");
+  min-height: 100%;
+}
+/* THESE ARE YOUR SETTINGS FOR MOBILE DEVICES/SMALLER SCREEN SIZES */
+@media screen and (max-device-width: 500px){
+  .bgimg-1 {
+    background-image: url("assets/background_placeholder.jpg");
+    min-height: 600px;
+  }
+  .bgimg-2 {
+    background-image: url("assets/background_placeholder.jpg");
+    min-height: 100%;
+  }
+  .bgimg-3 {
+    background-image: url("assets/background_placeholder.jpg");
+    min-height: 100%;
+  }
+  .bgimg-4 {
+    background-image: url("assets/background_placeholder.jpg");
+    min-height: 100%;
+  }
+}
+/* THESE ARE YOUR STYLE SETTINGS FOR CAPTIONS  */
+.caption {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #f6e0b5;
+  opacity: .7;
+}
+.caption span.border {
+    background-color: #0095b6;
+    color: #fff;
+    padding: 25px;
+    font-size: 25px;
+    letter-spacing: 1px;
+    opacity: .75;
+    font-family:'Patua One';
+}
+/* THESE ARE YOUR MAIN FONT SETTINGS  */
+h1 {
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  font: 26px "Oswald", sans-serif;
+  color: #111;
+}
+h2 {
+  letter-spacing: .5px;
+  text-transform: uppercase;
+  font: 20px "Patua One", serif;
+  color: #ecebe8;
+}
+h3 {
+  letter-spacing: 3px;
+  font-weight: bolder;
+  text-transform: uppercase;
+  font: 26px "Archivo Narrow", sans-serif;
+  color: #111;
+}
+h4 {
+  letter-spacing: 0.8px;
+  /* text-transform: uppercase; */
+  font: 26px "Archivo Narrow", sans-serif;
+  color: #272727;
+}
+/* THIS IS YOUR COLOR SETTING FOR ANYTHING THAT HAS A LINK TAG  */
+a {
+  color:#249cbf;
+}
+
+/*THIS IS HERE TO DISABLE THE PARRALEX SCROLLING EFFECT ON MOBILE DEVICE */
+@media only screen and (max-device-width: 550px) {
+    .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4 {
+        background-attachment: scroll;
+    }
+}
+/* THIS IS YOUR NAVBAR STYLE SETTINGS  */
+.navbar{
+         padding-left: 0px;
+         font-family: "Patua One";
+         font-size: 14PX;
+         text-align: left;
+         color: #595050;
+}
+/* THIS IS YOUR NAVBAR BACKGROUND/ACCENT COLOR WHEN CLICKED */
+.navbar-default .navbar-brand {
+    color: #272727;
+    background-color:#efefef;
+    opacity:.7;
+    font-weight: bold;
+    text-align: left;
+    font-family: "Patua One";
+    font-size: 17PX;
+}
+/* THIS IS YOUR MAIN COLOR ACROSS THE NAVBAR */
+.navbar {
+    background-color: white;
+  }
+/* HERE FOR TEXT ALIGN, OPACITY, PADDING  */
+.vision {
+  text-align: left;
+  opacity:.6;
+  padding:20px;
+}
+
+.bar {
+  fill: grey;
+}
+
+.bar:hover {
+  fill: white;
+}
+
+.tooltip {
+  position: absolute;
+  text-align: center;
+  width: 90px;
+  height: 80px;
+  padding: 2px;
+  font: 12px "Archivo Narrow";
+  background: black;
+  border: 2px;
+  border-radius: 8px;
+  pointer-events: none;
+}
+
+/* * {
+  font-family: "Archivo Narrow";
+} */
+svg {
+  background: #f1f1f1;
+}
+.right {
+  position : absolute;
+  top:0;
+  right:0;
+  background: black;
+  width: 650px;
+  height: 650px;
+}
