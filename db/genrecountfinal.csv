@@ -1,0 +1,13 @@
+,genre,count,image_path
+0,Action,1519,../assets/images/action.jpg
+1,Sports,906,../assets/images/sports.png
+2,Shooter,800,../assets/images/shooter.jpg
+3,Role-Playing,638,../assets/images/roleplay.jpg
+4,Racing,533,../assets/images/racing.jpg
+5,Platform,391,../assets/images/platformer.jpg
+6,Misc,378,../assets/images/misc.jpg
+7,Fighting,358,../assets/images/fighting.jpg
+8,Simulation,246,../assets/images/simulation.jpg
+9,Adventure,212,../assets/images/adventure.jpeg
+10,Strategy,189,../assets/images/strategy.jpeg
+11,Puzzle,110,../assets/images/puzzle.jpg
